@@ -1,5 +1,12 @@
-
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+<script>
+$(document).ready(function() {
+    $('.menu__icon').click(function(){
+          $('body').toggleClass('menu_shown');
+      });
+  });
+</script>
+<nav>
+<aside id="layout-menu" class="desktop layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
         <!-- CAN INSERT LOGO IMAGE HERE-->
@@ -76,4 +83,46 @@
         </a>
         </li>
     </ul>
+
     </aside>
+
+    <a class="menu__icon mobile"><span></span></a>
+    <div class="menu mobile ">
+            <!-- Dashboard -->
+            <ul>
+            <li id="overview" class="menu__item">
+            <a href="index.html" class="">
+                <i class=" fa-solid fa-house"></i>
+                <div data-i18n="Analytics">Overview</div>
+            </a>
+            </li>
+            <li id="about" class=" menu__item">
+            <a
+                href="project.html"
+                class=""
+            >
+                <i class=" fa-solid fa-info-circle"></i>
+                <div data-i18n="Project">About The Project</div>
+            </a>
+            </li>
+            <li id="support" class="menu__item">
+            <a
+                href="support.html"
+                class=""
+            >
+                <i class=" fa-solid fa-headset"></i>
+                <div data-i18n="Support">Support</div>
+            </a>
+            </li>
+            <li id="documentation" class=" menu__item">
+            <a
+                href="documentation.html"
+                class=""
+            >
+                <i class=" fa-solid fa-book"></i>
+                <div data-i18n="Documentation">Documentation</div>
+            </a>
+            </li></ul>
+        </div>
+    
+</nav>
