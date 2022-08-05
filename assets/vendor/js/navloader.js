@@ -81,20 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./libs/masonry/masonry.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/navloader.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./libs/masonry/masonry.js":
-/*!*********************************!*\
-  !*** ./libs/masonry/masonry.js ***!
-  \*********************************/
-/*! exports provided: Masonry */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./js/navloader.js":
+/*!*************************!*\
+  !*** ./js/navloader.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module 'masonry-layout/dist/masonry.pkgd'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\nthrow new Error(\"Cannot find module 'masonry-layout/dist/masonry.pkgd'\");\n// var Masonry = require('masonry-layout/dist/masonry.pkgd')\n// export { Masonry }\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9saWJzL21hc29ucnkvbWFzb25yeS5qcz8xNGNjIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRUE7QUFFQSIsImZpbGUiOiIuL2xpYnMvbWFzb25yeS9tYXNvbnJ5LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gdmFyIE1hc29ucnkgPSByZXF1aXJlKCdtYXNvbnJ5LWxheW91dC9kaXN0L21hc29ucnkucGtnZCcpXG5cbi8vIGV4cG9ydCB7IE1hc29ucnkgfVxuXG5pbXBvcnQgKiBhcyBNYXNvbnJ5IGZyb20gJ21hc29ucnktbGF5b3V0L2Rpc3QvbWFzb25yeS5wa2dkJztcblxuZXhwb3J0IHsgTWFzb25yeSB9O1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./libs/masonry/masonry.js\n");
+eval("$(\"#navbar\").load(\"../html/components/navbar.html\", function () {\n  var activeLink = window.location.pathname;\n\n  switch (activeLink) {\n    case \"/html/index.html\":\n      {\n        $(\"#overview\").addClass(\"active\");\n        break;\n      }\n\n    case \"/html/project.html\":\n      {\n        $(\"#about\").addClass(\"active\");\n        break;\n      }\n\n    case \"/html/support.html\":\n      {\n        $(\"#support\").addClass(\"active\");\n        break;\n      }\n\n    case \"/html/documentation.html\":\n      {\n        $(\"#documentation\").addClass(\"active\");\n        break;\n      }\n  }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9qcy9uYXZsb2FkZXIuanM/YWIxYiJdLCJuYW1lcyI6WyIkIiwibG9hZCIsImFjdGl2ZUxpbmsiLCJ3aW5kb3ciLCJsb2NhdGlvbiIsInBhdGhuYW1lIiwiYWRkQ2xhc3MiXSwibWFwcGluZ3MiOiJBQUNBQSxDQUFDLENBQUMsU0FBRCxDQUFELENBQWFDLElBQWIsQ0FBa0IsZ0NBQWxCLEVBQW9ELFlBQU07QUFDdEQsTUFBTUMsVUFBVSxHQUFHQyxNQUFNLENBQUNDLFFBQVAsQ0FBZ0JDLFFBQW5DOztBQUNBLFVBQU9ILFVBQVA7QUFDSSxTQUFLLGtCQUFMO0FBQXlCO0FBQ3JCRixTQUFDLENBQUMsV0FBRCxDQUFELENBQWVNLFFBQWYsQ0FBd0IsUUFBeEI7QUFDQTtBQUNIOztBQUNELFNBQUssb0JBQUw7QUFBMkI7QUFDdkJOLFNBQUMsQ0FBQyxRQUFELENBQUQsQ0FBWU0sUUFBWixDQUFxQixRQUFyQjtBQUNBO0FBQ0g7O0FBQ0QsU0FBSyxvQkFBTDtBQUEyQjtBQUN2Qk4sU0FBQyxDQUFDLFVBQUQsQ0FBRCxDQUFjTSxRQUFkLENBQXVCLFFBQXZCO0FBQ0E7QUFDSDs7QUFDRCxTQUFLLDBCQUFMO0FBQWlDO0FBQzdCTixTQUFDLENBQUMsZ0JBQUQsQ0FBRCxDQUFvQk0sUUFBcEIsQ0FBNkIsUUFBN0I7QUFDQTtBQUNIO0FBaEJMO0FBa0JILENBcEJEIiwiZmlsZSI6Ii4vanMvbmF2bG9hZGVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbiQoXCIjbmF2YmFyXCIpLmxvYWQoXCIuLi9odG1sL2NvbXBvbmVudHMvbmF2YmFyLmh0bWxcIiwgKCkgPT4ge1xyXG4gICAgY29uc3QgYWN0aXZlTGluayA9IHdpbmRvdy5sb2NhdGlvbi5wYXRobmFtZTtcclxuICAgIHN3aXRjaChhY3RpdmVMaW5rKSB7XHJcbiAgICAgICAgY2FzZSBcIi9odG1sL2luZGV4Lmh0bWxcIjoge1xyXG4gICAgICAgICAgICAkKFwiI292ZXJ2aWV3XCIpLmFkZENsYXNzKFwiYWN0aXZlXCIpO1xyXG4gICAgICAgICAgICBicmVhaztcclxuICAgICAgICB9XHJcbiAgICAgICAgY2FzZSBcIi9odG1sL3Byb2plY3QuaHRtbFwiOiB7XHJcbiAgICAgICAgICAgICQoXCIjYWJvdXRcIikuYWRkQ2xhc3MoXCJhY3RpdmVcIik7XHJcbiAgICAgICAgICAgIGJyZWFrO1xyXG4gICAgICAgIH1cclxuICAgICAgICBjYXNlIFwiL2h0bWwvc3VwcG9ydC5odG1sXCI6IHtcclxuICAgICAgICAgICAgJChcIiNzdXBwb3J0XCIpLmFkZENsYXNzKFwiYWN0aXZlXCIpO1xyXG4gICAgICAgICAgICBicmVhaztcclxuICAgICAgICB9XHJcbiAgICAgICAgY2FzZSBcIi9odG1sL2RvY3VtZW50YXRpb24uaHRtbFwiOiB7XHJcbiAgICAgICAgICAgICQoXCIjZG9jdW1lbnRhdGlvblwiKS5hZGRDbGFzcyhcImFjdGl2ZVwiKTtcclxuICAgICAgICAgICAgYnJlYWs7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59KTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./js/navloader.js\n");
 
 /***/ })
 
