@@ -15,6 +15,11 @@ a {
   display: none;
 }
 
+.layout-menu-toggle-container .layout-menu-toggle {
+  padding-top: 14px;
+  padding-left: 26px;
+}
+
 .menu__icon {
   height: 32px;
   width: 43px;

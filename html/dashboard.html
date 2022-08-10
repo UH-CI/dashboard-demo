@@ -43,14 +43,30 @@
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
-    <!-- Page CSS -->
+    <!-- these shouldn't rely on anything, load async -->
+    <script src="../assets/vendor/libs/popper/popper.js" async></script>
+    <script src="../assets/vendor/js/bootstrap.js" async></script>
 
-    <!-- Helpers -->
-    <script src="../assets/vendor/js/helpers.js"></script>
+    <!-- load in order with defer -->
+    <script src="../assets/vendor/libs/jquery/jquery.js" defer></script>
+    <script src="../js/layout-loader.js" defer></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" defer></script>
+    <script src="../assets/vendor/js/helpers.js" defer></script>
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/vendor/js/menu.js" defer></script>
+
+    <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js" defer></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js" defer></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js" defer></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script src="https://buttons.github.io/buttons.js" defer></script>
     
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../assets/js/config.js"></script>
   </head>
 
   <body>
@@ -78,6 +94,7 @@
                     <ul class="nav nav-pills mb-3 nav-fill" role="tablist">
                       <li class="nav-item">
                         <button
+                          id="overview-tab"
                           type="button"
                           class="nav-link active"
                           role="tab"
@@ -86,6 +103,7 @@
                           aria-controls="navs-pills-justified-overview"
                           aria-selected="true"
                         >
+                          
                           <i class="fa-solid fa-house"></i> Overview
                           <!--<span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger">3</span>-->
                         </button>
@@ -93,6 +111,7 @@
                       
                       <li class="nav-item">
                         <button
+                          id="substance-abuse-tab"
                           type="button"
                           class="nav-link"
                           role="tab"
@@ -101,11 +120,12 @@
                           aria-controls="navs-pills-justified-subabuse"
                           aria-selected="false"
                         >
-                          <i class="fa fa-syringe"></i> Substance Abuse
+                        <i class="fa fa-syringe"></i> Substance Abuse
                         </button>
                       </li>
                       <li class="nav-item">
                         <button
+                          id="mental-health-tab"
                           type="button"
                           class="nav-link"
                           role="tab"
@@ -119,19 +139,21 @@
                       </li>
                       <li class="nav-item">
                         <button
+                          id="co-occurring-tab" 
                           type="button"
                           class="nav-link"
                           role="tab"
                           data-bs-toggle="tab"
-                          data-bs-target="#navs-pills-justified-cooccuring"
-                          aria-controls="navs-pills-justified-cooccuring"
+                          data-bs-target="#navs-pills-justified-cooccurring"
+                          aria-controls="navs-pills-justified-cooccurring"
                           aria-selected="false"
                         >
-                          <i class="fa-solid fa-arrow-down-up-across-line"></i> Co-Occuring
+                          <i class="fa-solid fa-arrow-down-up-across-line"></i> Co-Occurring
                         </button>
                       </li>
                       <li class="nav-item">
                         <button
+                          id="behavioral-crisis-tab"
                           type="button"
                           class="nav-link"
                           role="tab"
@@ -501,7 +523,7 @@
                         </div>
                         <!--/ Expense Overview -->
                       </div>
-                      <div class="tab-pane fade" id="navs-pills-justified-cooccuring" role="tabpanel">
+                      <div class="tab-pane fade" id="navs-pills-justified-cooccurring" role="tabpanel">
                         <p>DataSets:
                           <ul>
                             <li>Number per 10K discharges
@@ -729,7 +751,7 @@
                                     </div>
                                     
                                   </div>
-                                  <span>ADAD Total Individuals Served With Co-Occuring</span>
+                                  <span>ADAD Total Individuals Served With Co-Occurring</span>
                                   <h3 class="card-title text-nowrap mb-1">51</h3>
                                   <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +15.42%</small>
                                 </div>
@@ -748,7 +770,7 @@
                                     </div>
                                     
                                   </div>
-                                  <span>AMHD Total Individuals Served With Co-Occuring</span>
+                                  <span>AMHD Total Individuals Served With Co-Occurring</span>
                                   <h3 class="card-title text-nowrap mb-1">41</h3>
                                   <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +22.42%</small>
                                 </div>
@@ -799,31 +821,5 @@
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-    <!-- / Layout wrapper -->
-
-
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../js/layout-loader.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
-
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>

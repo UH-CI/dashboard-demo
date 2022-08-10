@@ -15121,9 +15121,6 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 .menu-vertical .menu-icon {
   width: 1.5rem;
 }
-.menu-vertical .menu-sub .menu-icon {
-  margin-right: 0;
-}
 @media (max-width: 1199.98px) {
   .menu-vertical .menu-sub .menu-icon {
     display: none;

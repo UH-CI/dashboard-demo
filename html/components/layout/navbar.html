@@ -1,0 +1,115 @@
+<script>
+    $(document).ready(function() {
+        $('.menu__icon').click(function(){
+            $('body').toggleClass('menu_shown');
+        });
+    });
+</script>
+<nav>
+    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+            <a href="dashboard.html" class="app-brand-link">
+            <!-- CAN INSERT LOGO IMAGE HERE-->
+            <span class=" demo menu-text fw-bolder ms-2">OD2A-C3</span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Dashboard</span></li>
+
+
+
+
+            <li id="dashboard" class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                  <div data-i18n="Account Settings">Dashboard</div>
+                </a>
+                <ul class="menu-sub">
+                    <li id="overview" class="menu-item">
+                        <a href="dashboard.html#overview" class="menu-link">
+                            <i class="menu-icon fa-solid fa-house"></i>
+                            <div data-i18n="Analytics">Overview</div>
+                        </a>
+                        </li>
+                        <li id="substance-abuse" class="menu-item ">
+                        <a href="dashboard.html#substance-abuse" class="menu-link">
+                            <i class="menu-icon fa fa-syringe"></i>
+                            <div data-i18n="Analytics">Substance Abuse</div>
+                        </a>
+                        </li>
+                        <li id="mental-health" class="menu-item ">
+                        <a href="dashboard.html#mental-health" class="menu-link">
+                            <i class="menu-icon fa fa-user-md"></i>
+                            <div data-i18n="Analytics">Mental Health</div>
+                        </a>
+                        </li>
+                        <li id="co-occurring" class="menu-item">
+                        <a href="dashboard.html#co-occurring" class="menu-link">
+                            <i class="menu-icon fa-solid fa-arrow-down-up-across-line"></i>
+                            <div data-i18n="Analytics">Co-Occurring</div>
+                        </a>
+                        </li>
+                        <li id="behavioral-crisis" class="menu-item ">
+                        <a href="dashboard.html#behavioral-crisis" class="menu-link">
+                            <i class="menu-icon fa fa-ambulance"></i>
+                            <div data-i18n="Analytics">Behavioral Crisis</div>
+                        </a>
+                    </li>
+                </ul>
+              </li>
+
+
+
+
+
+
+
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">About</span></li>
+            <li id="about" class="menu-item">
+            <a
+                href="project.html"
+                class="menu-link"
+            >
+                <i class="menu-icon fa-solid fa-info-circle"></i>
+                <div data-i18n="Project">About The Project</div>
+            </a>
+            </li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Help</span></li>
+            <li id="support" class="menu-item">
+            <a
+                href="support.html"
+                class="menu-link"
+            >
+                <i class="menu-icon fa-solid fa-headset"></i>
+                <div data-i18n="Support">Support</div>
+            </a>
+            </li>
+            <li id="documentation" class="menu-item">
+            <a
+                href="documentation.html"
+                class="menu-link"
+            >
+                <i class="menu-icon fa-solid fa-book"></i>
+                <div data-i18n="Documentation">Documentation</div>
+            </a>
+            </li>
+        </ul>
+
+    </aside>
+    
+    <div class="layout-menu-toggle-container">
+        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+            </a>
+        </div>
+    </div>
+</nav>
