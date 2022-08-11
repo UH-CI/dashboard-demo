@@ -21,7 +21,6 @@ function triggerAnchor(anchor, lastAnchor) {
 function setupNavAnchors() {
     let anchors = ["#overview", "#substance-abuse", "#mental-health", "#co-occurring", "#behavioral-crisis"]
     for(let anchor of anchors) {
-        console.log($(`${anchor}-tab`)[0]);
         $(`${anchor}-tab`)[0].onclick = () => {
             window.location.hash = anchor;
         };
