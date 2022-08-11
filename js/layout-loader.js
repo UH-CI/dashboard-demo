@@ -32,9 +32,10 @@ $("#footer").load("../html/components/layout/footer.html");
 //sync load navbar since it needs to be loaded before other scripts are executed
 $("#navbar").syncLoad("../html/components/layout/navbar.html");
 
-const activeLink = window.location.pathname;
+//don't need entire link path, just active page, so parse out page name
+const activeLink = window.location.pathname.split("/").pop();
 switch(activeLink) {
-    case "/html/dashboard.html": {
+    case "dashboard.html": {
         setupNavAnchors();
         let anchor = $(location).attr('hash');
         if(!anchor) {
@@ -42,7 +43,7 @@ switch(activeLink) {
             window.location.hash = anchor;
         }
         //if in dashboard expand dashboard menu
-        $("#dashboard").addClass("open");
+        $("#dashboard").addClass("open active");
         triggerAnchor(anchor, null);
         let lastAnchor = anchor;
         $(window).on('hashchange', function(e){
@@ -52,15 +53,15 @@ switch(activeLink) {
         });
         break;
     }
-    case "/html/project.html": {
+    case "project.html": {
         $("#about").addClass("active");
         break;
     }
-    case "/html/support.html": {
+    case "support.html": {
         $("#support").addClass("active");
         break;
     }
-    case "/html/documentation.html": {
+    case "documentation.html": {
         $("#documentation").addClass("active");
         break;
     }
