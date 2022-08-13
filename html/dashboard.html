@@ -120,7 +120,7 @@
                           aria-controls="navs-pills-justified-subabuse"
                           aria-selected="false"
                         >
-                        <i class="fa fa-syringe"></i> Substance Abuse
+                        <i class="fa fa-syringe"></i> Substance Use (SU)
                         </button>
                       </li>
                       <li class="nav-item">
@@ -134,7 +134,7 @@
                           aria-controls="navs-pills-justified-mentalhealth"
                           aria-selected="false"
                         >
-                          <i class="fa fa-user-md"></i> Mental Health
+                          <i class="fa fa-user-md"></i> Mental Health (MH)
                         </button>
                       </li>
                       <li class="nav-item">
@@ -148,7 +148,7 @@
                           aria-controls="navs-pills-justified-cooccurring"
                           aria-selected="false"
                         >
-                          <i class="fa-solid fa-arrow-down-up-across-line"></i> Co-Occurring
+                          <i class="fa-solid fa-arrow-down-up-across-line"></i> Co-Occurring SU/MH
                         </button>
                       </li>
                       <li class="nav-item">
@@ -186,7 +186,7 @@
                                     </div>
                                     
                                   </div>
-                                  <span class="fw-semibold d-block mb-1">People Requiring Substance Abuse Help Across The State</span>
+                                  <span class="fw-semibold d-block mb-1">People Requiring Substance Use Help Across The State</span>
                                   <h3 class="card-title mb-2">90,000</h3>
                                 </div>
                               </div>
@@ -272,31 +272,12 @@
                         </div>
                       </div>
                       <div class="tab-pane fade" id="navs-pills-justified-mentalhealth" role="tabpanel">
-                        <p>DataSets:
+                        <p>Datasets:
                           <ul>
-                            <li>Number per 10K discharges
-                              <ul>
-                                <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                <li>Polysubstance abuse</li>
-                              </ul>
-                            </li>
-                            <li>Percentage of overdose deaths
-                              <ul>
-                                <li>In general (does this just mean compared to all deaths?)</li>
-                                <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                <li>Polysubstance abuse</li>
-                              </ul>
-                            </li>
                             <li>Number served by public services
                               <ul>
-                                <li>Incoming Hawaii CARES calls</li>
                                 <li>Served by AMHD</li>
                                 <li>Served by CAMHD</li>
-                                <li>AMHD individuals served with co-occurring mental health and substance abuse</li>
-                                <li>ADAD individuals served with co-occurring mental health and substance abuse</li>
-                                <li>CAMHD individuals served with co-occurring mental health and substance abuse</li>
                               </ul>
                             </li>
                           </ul>
@@ -406,13 +387,11 @@
  
                       <div class="tab-pane fade" id="navs-pills-justified-subabuse" role="tabpanel">
                         <p class="mb-0">
-                          <p>DataSets:
+                          <p>Datasets:
                             <ul>
                               <li>Number per 10K discharges
                                 <ul>
-                                  <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                  <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                  <li>Polysubstance abuse</li>
+                                  <li>Polysubstance use</li>
                                   <li>Any drug overdose</li>
                                   <li>Opioid overdose</li>
                                   <li>Heroin overdoes</li>
@@ -421,9 +400,7 @@
                               </li>
                               <li>Percentage of emergency department discharges and hospitalizations
                                 <ul>
-                                  <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                  <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                  <li>Polysubstance abuse</li>
+                                  <li>Polysubstance use</li>
                                 </ul>
                               </li>
                               <li>Rates of emergency department discharges and hospitalizations per DOSE definitions
@@ -436,19 +413,13 @@
                               </li>
                               <li>Percentage of overdose deaths
                                 <ul>
-                                  <li>In general (does this just mean compared to all deaths?)</li>
-                                  <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                  <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                  <li>Polysubstance abuse</li>
+                                  <li>Compared to all drug related deaths</li>
+                                  <li>Polysubstance use</li>
                                 </ul>
                               </li>
                               <li>Number served by public services
                                 <ul>
-                                  <li>Incoming Hawaii CARES calls</li>
                                   <li>Served by ADAD</li>
-                                  <li>AMHD individuals served with co-occurring mental health and substance abuse</li>
-                                  <li>ADAD individuals served with co-occurring mental health and substance abuse</li>
-                                  <li>CAMHD individuals served with co-occurring mental health and substance abuse</li>
                                 </ul>
                               </li>
                             </ul>
@@ -470,6 +441,13 @@
                           </ul>
                         </p>
                         </p>
+
+                        <hr>
+
+                        
+                        <h4 class="fw-bold py-3 mb-4">
+                          Occurrences per 10K Emergency Room Discharges
+                        </h4>
                         <!-- Expense Overview -->
                         <div class="col-md-6 col-lg-11 order-1 mb-4">
                           <div class="card h-100">
@@ -481,71 +459,340 @@
                                     class="nav-link active"
                                     role="tab"
                                     data-bs-toggle="tab"
-                                    data-bs-target="#navs-tabs-line-card-income"
-                                    aria-controls="navs-tabs-line-card-income"
+                                    data-bs-target="#polysubstance-per-10k"
+                                    aria-controls="polysubstance-per-10k"
                                     aria-selected="true"
                                   >
-                                    Var1
+                                    Polysubstance Use
                                   </button>
                                 </li>
                                 <li class="nav-item">
-                                  <button type="button" class="nav-link" role="tab">Var2</button>
+                                  <button
+                                    type="button"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#any-od-per-10k"
+                                    aria-controls="any-od-per-10k"
+                                    aria-selected="false"
+                                  >
+                                    Any Drug Overdose
+                                  </button>
                                 </li>
                                 <li class="nav-item">
-                                  <button type="button" class="nav-link" role="tab">Var3</button>
+                                  <li class="nav-item">
+                                    <button
+                                      type="button"
+                                      class="nav-link"
+                                      role="tab"
+                                      data-bs-toggle="tab"
+                                      data-bs-target="#opioid-od-per-10k"
+                                      aria-controls="opioid-od-per-10k"
+                                      aria-selected="false"
+                                    >
+                                    Opioid Overdose
+                                    </button>
                                 </li>
-                              </ul>
-                            </div>
-                            <div class="card-body px-0">
-                              <div class="tab-content p-0">
-                                <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
-                                  <div class="d-flex p-4 pt-3">
-                                    <div class="avatar flex-shrink-0 me-3">
-                                      <img src="../assets/img/icons/unicons/chart.png" alt="User" />
-                                    </div>
-                                    <div>
-                                      <small class="text-muted d-block">Total</small>
-                                      <div class="d-flex align-items-center">
-                                        <h6 class="mb-0 me-1">60</h6>
-                                        <small class="text-success fw-semibold">
-                                          <i class="bx bx-chevron-up"></i>
-                                          22.9%
-                                        </small>
-                                      </div>
-                                    </div>
+                                <li class="nav-item">
+                                  <li class="nav-item">
+                                    <button
+                                      type="button"
+                                      class="nav-link"
+                                      role="tab"
+                                      data-bs-toggle="tab"
+                                      data-bs-target="#heroin-od-per-10k"
+                                      aria-controls="heroin-od-per-10k"
+                                      aria-selected="false"
+                                    >
+                                    Heroin Overdose
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                  <li class="nav-item">
+                                    <button
+                                      type="button"
+                                      class="nav-link"
+                                      role="tab"
+                                      data-bs-toggle="tab"
+                                      data-bs-target="#stimulant-od-per-10k"
+                                      aria-controls="stimulant-od-per-10k"
+                                      aria-selected="false"
+                                    >
+                                    Stimulant Overdose
+                                    </button>
+                                </li>
+                                <div class="tab-content">
+                                  <div class="tab-pane fade show active" id="polysubstance-per-10k" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
                                   </div>
-                                  <div id="incomeChart"></div>
-                                  
+                                  <div class="tab-pane fade" id="any-od-per-10k" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                  <div class="tab-pane fade" id="opioid-od-per-10k" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                  <div class="tab-pane fade" id="heroin-od-per-10k" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                  <div class="tab-pane fade" id="stimulant-od-per-10k" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
                                 </div>
-                              </div>
+                              </ul>
+                              
                             </div>
+
                           </div>
                         </div>
                         <!--/ Expense Overview -->
+
+                        <hr>
+
+                        
+
+                        <!-- Expense Overview -->
+                        <h4 class="fw-bold py-3 mb-4">
+                          Percentage of Emergency Department Discharges and Hospitalizations
+                        </h4>
+
+                        <div class="col-md-6 col-lg-11 order-1 mb-4">
+                          <div class="card h-100">
+                            <div class="card-header">
+                              <ul class="nav nav-pills" role="tablist">
+                                
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link active"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#polysubstance-percentage"
+                                    aria-controls="polysubstance-percentage"
+                                    aria-selected="true"
+                                  >
+                                    Polysubstance Use
+                                  </button>
+                                </li>
+                                <div class="tab-content">
+                                  <div class="tab-pane fade show active" id="polysubstance-percentage" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                </div>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <hr>
+
+                        
+
+                        <!-- Expense Overview -->
+                        <h4 class="fw-bold py-3 mb-4">
+                          Rates of emergency department discharges and hospitalizations per DOSE definitions
+                        </h4>
+
+                        <div class="col-md-6 col-lg-11 order-1 mb-4">
+                          <div class="card h-100">
+                            <div class="card-header">
+                              <ul class="nav nav-pills" role="tablist">
+                                
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link active"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#any-drug-rates"
+                                    aria-controls="any-drug-rates"
+                                    aria-selected="true"
+                                    >
+                                    Any Drug Overdose
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#opioid-rates"
+                                    aria-controls="opioid-rates"
+                                    aria-selected="false"
+                                  >
+                                    Opioid Overdose
+                                  </button>
+                                </li>
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#heroin-rates"
+                                    aria-controls="heroin-rates"
+                                    aria-selected="false"
+                                  >
+                                    Heroin Overdose
+                                  </button>
+                                </li>
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#stimulant-rates"
+                                    aria-controls="stimulant-rates"
+                                    aria-selected="false"
+                                  >
+                                    Stimulant Overdose
+                                  </button>
+                              </li>
+                              <div class="tab-content">
+                                <div class="tab-pane fade show active" id="any-drug-rates" role="tabpanel">
+                                  <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                </div>
+                                <div class="tab-pane fade" id="opioid-rates" role="tabpanel">
+                                  <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                </div>
+                                <div class="tab-pane fade" id="heroin-rates" role="tabpanel">
+                                  <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                </div>
+                                <div class="tab-pane fade" id="stimulant-rates" role="tabpanel">
+                                  <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                </div>
+                              </div>
+                            </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <hr>
+
+                        
+
+                        <!-- Expense Overview -->
+                        <h4 class="fw-bold py-3 mb-4">
+                          Percentage of overdose deaths
+                        </h4>
+
+                        <div class="col-md-6 col-lg-11 order-1 mb-4">
+                          <div class="card h-100">
+                            <div class="card-header">
+                              <ul class="nav nav-pills" role="tablist">
+                                
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link active"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#all-death-od-percentage"
+                                    aria-controls="all-death-od-percentage"
+                                    aria-selected="true"
+                                  >
+                                    Compared to all drug related deaths
+                                  </button>
+                                  <li class="nav-item">
+                                    <button
+                                      type="button"
+                                      class="nav-link"
+                                      role="tab"
+                                      data-bs-toggle="tab"
+                                      data-bs-target="#polysubstance-od-percentage"
+                                      aria-controls="polysubstance-od-percentage"
+                                      aria-selected="false"
+                                    >
+                                      Polysubstance Use
+                                    </button>
+                                </li>
+                                <div class="tab-content">
+                                  <div class="tab-pane fade show active" id="all-death-od-percentage" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                  <div class="tab-pane fade" id="polysubstance-od-percentage" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                </div>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <hr>
+
+                        
+
+                        <!-- Expense Overview -->
+                        <h4 class="fw-bold py-3 mb-4">
+                          Number served by public services
+                        </h4>
+
+                        <div class="col-md-6 col-lg-11 order-1 mb-4">
+                          <div class="card h-100">
+                            <div class="card-header">
+                              <ul class="nav nav-pills" role="tablist">
+                                
+                                <li class="nav-item">
+                                  <button
+                                    type="button"
+                                    class="nav-link active"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#adad-public-service"
+                                    aria-controls="adad-public-service"
+                                    aria-selected="true"
+                                  >
+                                    Served by ADAD
+                                  </button>
+                                </li>
+                                <div class="tab-content">
+                                  <div class="tab-pane fade show active" id="adad-public-service" role="tabpanel">
+                                    <img style="width:100%;" src="../assets/img/temp/chart.png" alt="" />
+                                  </div>
+                                </div>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                       </div>
                       <div class="tab-pane fade" id="navs-pills-justified-cooccurring" role="tabpanel">
                         <p>DataSets:
                           <ul>
                             <li>Number per 10K discharges
                               <ul>
-                                <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                <li>Polysubstance abuse</li>
+                                <li>Co-occurring substance use and mental health</li>
                               </ul>
                             </li>
                             <li>Percentage of overdose deaths
                               <ul>
-                                <li>In general (does this just mean compared to all deaths?)</li>
-                                <li>Co-occurring substance use (primary) and mental health (secondary)</li>
-                                <li>Co-occurring mental health (primary) and substance use (secondary)</li>
-                                <li>Polysubstance abuse</li>
+                                <li>Co-occurring substance use and mental health</li>
                               </ul>
                             </li>
                             <li>Number served by public services
                               <ul>
-                                <li>AMHD individuals served with co-occurring mental health and substance abuse</li>
-                                <li>ADAD individuals served with co-occurring mental health and substance abuse</li>
-                                <li>CAMHD individuals served with co-occurring mental health and substance abuse</li>
+                                <li>AMHD individuals served with co-occurring mental health and substance use</li>
+                                <li>ADAD individuals served with co-occurring mental health and substance use</li>
+                                <li>CAMHD individuals served with co-occurring mental health and substance use</li>
                               </ul>
                             </li>
                           </ul>
