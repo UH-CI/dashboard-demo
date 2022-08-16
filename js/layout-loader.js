@@ -1,3 +1,5 @@
+const anchors = new Set(["#overview", "#substance-use", "#mental-health", "#co-occurring", "#behavioral-crisis"])
+
 //extend jquery with syncLoad function to allow html components relying on scripts to be loaded before further script executions
 $.fn.extend({
     syncLoad: function (url) {
@@ -6,30 +8,36 @@ $.fn.extend({
             async: false,
             type: "GET"
         }).responseText;
-        $("#navbar").html(res);
+        $(this).html(res);
     }
 });
 
 function triggerAnchor(anchor, lastAnchor) {
     if(lastAnchor) {
-        $(lastAnchor).removeClass("active");
+        $(`${lastAnchor}-nav-selector`).removeClass("active");
     }
-    $(anchor).addClass("active");
-    $(`${anchor}-tab`)[0].click();
+    $(`${anchor}-nav-selector`).addClass("active");
+    $(`${anchor}-tab-selector`)[0].click();
 }
 
 function setupNavAnchors() {
-    let anchors = ["#overview", "#substance-abuse", "#mental-health", "#co-occurring", "#behavioral-crisis"]
     for(let anchor of anchors) {
-        $(`${anchor}-tab`)[0].onclick = () => {
+        $(`${anchor}-tab-selector`)[0].onclick = () => {
             window.location.hash = anchor;
         };
     }
 }
 
+
+
 //load footer async, doesn't require other scripts
 $("#footer").load("../html/components/layout/footer.html");
 //sync load navbar since it needs to be loaded before other scripts are executed
+//tabs
+for(let anchor of anchors) {
+    $(`${anchor}-tab-content`).syncLoad(`../html/components/dashboard-tabs/${anchor.substring(1)}.html`);
+}
+//navbar
 $("#navbar").syncLoad("../html/components/layout/navbar.html");
 
 //don't need entire link path, just active page, so parse out page name
@@ -38,7 +46,7 @@ switch(activeLink) {
     case "dashboard.html": {
         setupNavAnchors();
         let anchor = $(location).attr('hash');
-        if(!anchor) {
+        if(!anchors.has(anchor)) {
             anchor = "#overview";
             window.location.hash = anchor;
         }
@@ -48,8 +56,11 @@ switch(activeLink) {
         let lastAnchor = anchor;
         $(window).on('hashchange', function(e){
             anchor = $(location).attr('hash');
-            triggerAnchor(anchor, lastAnchor);
-            lastAnchor = anchor
+            //only trigger anchor if valid tab anchor
+            if(anchors.has(anchor)) {
+                triggerAnchor(anchor, lastAnchor);
+                lastAnchor = anchor
+            }
         });
         break;
     }

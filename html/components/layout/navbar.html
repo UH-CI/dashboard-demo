@@ -1,10 +1,3 @@
-<script>
-    $(document).ready(function() {
-        $('.menu__icon').click(function(){
-            $('body').toggleClass('menu_shown');
-        });
-    });
-</script>
 <nav>
     <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         <div class="app-brand demo">
@@ -33,31 +26,31 @@
                   <div data-i18n="Account Settings">Dashboard</div>
                 </a>
                 <ul class="menu-sub">
-                    <li id="overview" class="menu-item">
+                    <li id="overview-nav-selector" class="menu-item">
                         <a href="dashboard.html#overview" class="menu-link">
                             <i class="menu-icon fa-solid fa-house"></i>
                             <div data-i18n="Analytics">Overview</div>
                         </a>
                         </li>
-                        <li id="substance-abuse" class="menu-item ">
-                        <a href="dashboard.html#substance-abuse" class="menu-link">
+                        <li id="substance-use-nav-selector" class="menu-item ">
+                        <a href="dashboard.html#substance-use" class="menu-link">
                             <i class="menu-icon fa fa-syringe"></i>
                             <div data-i18n="Analytics">Substance Use (SU)</div>
                         </a>
                         </li>
-                        <li id="mental-health" class="menu-item ">
+                        <li id="mental-health-nav-selector" class="menu-item ">
                         <a href="dashboard.html#mental-health" class="menu-link">
                             <i class="menu-icon fa fa-user-md"></i>
                             <div data-i18n="Analytics">Mental Health (MH)</div>
                         </a>
                         </li>
-                        <li id="co-occurring" class="menu-item">
+                        <li id="co-occurring-nav-selector" class="menu-item">
                         <a href="dashboard.html#co-occurring" class="menu-link">
                             <i class="menu-icon fa-solid fa-arrow-down-up-across-line"></i>
                             <div data-i18n="Analytics">Co-Occurring SU/MH</div>
                         </a>
                         </li>
-                        <li id="behavioral-crisis" class="menu-item ">
+                        <li id="behavioral-crisis-nav-selector" class="menu-item ">
                         <a href="dashboard.html#behavioral-crisis" class="menu-link">
                             <i class="menu-icon fa fa-ambulance"></i>
                             <div data-i18n="Analytics">Behavioral Crisis</div>
