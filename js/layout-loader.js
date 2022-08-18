@@ -31,10 +31,10 @@ function setupNavAnchors() {
 
 
 //load footer async, doesn't require other scripts
-$("#footer").load("/html/components/layout/footer.html");
+$("#footer").load("../html/components/layout/footer.html");
 //sync load navbar since it needs to be loaded before other scripts are executed
 //navbar
-$("#navbar").syncLoad("/html/components/layout/navbar.html");
+$("#navbar").syncLoad("../html/components/layout/navbar.html");
 
 //don't need entire link path, just active page, so parse out page name
 const activeLink = window.location.pathname.split("/").pop();
@@ -42,7 +42,7 @@ switch(activeLink) {
     case "dashboard.html": {
         //tabs
         for(let anchor of anchors) {
-            $(`${anchor}-tab-content`).syncLoad(`/html/components/dashboard-tabs/${anchor.substring(1)}.html`);
+            $(`${anchor}-tab-content`).syncLoad(`../html/components/dashboard-tabs/${anchor.substring(1)}.html`);
         }
         setupNavAnchors();
         let anchor = $(location).attr('hash');
@@ -62,7 +62,7 @@ switch(activeLink) {
                 lastAnchor = anchor
             }
         });
-        $.getScript("/js/dashboard.js");
+        $.getScript("../js/dashboard.js");
         break;
     }
     case "project.html": {
