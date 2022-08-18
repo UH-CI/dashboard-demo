@@ -1,110 +1,353 @@
 
-<p>Datasets:
-    <ul>
-    <li>Number served by public services
-        <ul>
-        <li>Served by AMHD</li>
-        <li>Served by CAMHD</li>
-        </ul>
-    </li>
-    </ul>
-</p>
-<p>Desired Filters (Where Applicable):
-    <ul>
-    <li>Homelessness</li>
-    <li>Economic</li>
-    <li>Demographics (Sex/Gender, Race, Ethnicity, Age)</li>
-    <li>Geographic Region</li>
-    <li>Discharge Month</li>
-    <li>Substance Type</li>
-    <li>Mental Illness</li>
-    <li>Call Urgency</li>
-    <li>Call Purpose</li>
-    <li>Date Range</li>
-    <li>Day/Week/Month</li>
-    <li>Service Type</li>
-    </ul>
-</p>
+<h1 class="px-4">
+    Hawaiʻi Mental Health Statistics
+</h1>
 
-<div class="col-12 col-lg-12 order-2 order-md-3 order-lg-2 mb-4">
-    <div class="card">
-    <div class="row row-bordered g-0">
-        <div class="col-md-8">
-        <h5 class="card-header m-0 me-2 pb-3">Total Mental Health</h5>
-        <div id="totalRevenueChart" class="px-2"></div>
+<div class="card block shadow-top my-4">
+    <div class="card-header">
+        <h4 class="fw-bold">
+            Rates of Substance Use
+        </h4>
+        <hr>
+    </div>
+
+    <ul class="nav nav-pills px-4 nav-fill" role="tablist">
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link active"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#co-occurring-mh-su-mh-tab"
+            aria-controls="co-occurring-mh-su-mh-tab"
+            aria-selected="true"
+            >
+            Co-Occurring Diagnosis: MH (Primary) and SU (Secondary)
+            </button>
+        </li>
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#co-occurring-su-mh-mh-tab"
+            aria-controls="co-occurring-su-mh-mh-tab"
+            aria-selected="false"
+            >
+            Co-Occurring Diagnosis: SU (Primary) and MH (Secondary)
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content px-0">
+        <div class="tab-pane fade show active" id="co-occurring-mh-su-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Cases Per 10K Discharges
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                    <div class="vis-panel">
+                        <h3 class="px-4">
+                            Percent of Emergeny Department Discharges and Hospitalizations
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-        <div class="card-body">
-            <div class="text-center">
-            <div class="dropdown">
-                <button
-                class="btn btn-sm btn-outline-primary dropdown-toggle"
+
+        <div class="tab-pane fade" id="co-occurring-su-mh-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Cases Per 10K Discharges
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                    <div class="vis-panel">
+                        <h3 class="px-4">
+                            Percent of Emergeny Department Discharges and Hospitalizations
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card block shadow-top my-4">
+    <div class="card-header">
+        <h4 class="fw-bold">
+            Overdose Death Statistics
+        </h4>
+        <hr>
+    </div>
+
+    <ul class="nav nav-pills px-4 nav-fill" role="tablist">
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link active"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#co-occurring-su-mh-od-deaths-mh-tab"
+            aria-controls="co-occurring-su-mh-od-deaths-mh-tab"
+            aria-selected="true"
+            >
+            Co-Occurring Diagnosis: MH and SU
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content px-0">
+        <div class="tab-pane fade show active" id="co-occurring-su-mh-od-deaths-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Overdose Deaths
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card block shadow-top my-4">
+    <div class="card-header">
+    <h4 class="fw-bold">
+        Public Service Utilization Statistics
+    </h4>
+    <hr>
+    </div>
+
+    <ul class="nav nav-pills px-4 nav-fill" role="tablist">
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link active"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#served-by-amhd-mh-tab"
+            aria-controls="served-by-amhd-mh-tab"
+            aria-selected="true"
+            >
+            Served by AMHD
+            </button>
+        </li>
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#served-by-camhd-mh-tab"
+            aria-controls="served-by-camhd-mh-tab"
+            aria-selected="false"
+            >
+            Served by CAMHD
+            </button>
+        </li>
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#served-by-amhd-co-occurring-mh-tab"
+            aria-controls="served-by-amhd-co-occurring-mh-tab"
+            aria-selected="false"
+            >
+            Served by AMHD with co-occurring MH and SU diagnosis
+            </button>
+        </li>
+        <li class="nav-item">
+            <button
                 type="button"
-                id="growthReportId"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >
-                2022
-                </button>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="growthReportId">
-                <a class="dropdown-item" href="javascript:void(0);">2021</a>
-                <a class="dropdown-item" href="javascript:void(0);">2020</a>
-                <a class="dropdown-item" href="javascript:void(0);">2019</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div id="growthChart"></div>
-        <div class="text-center fw-semibold pt-3 mb-2">62%  Growth</div>
+                class="nav-link"
+                role="tab"
+                data-bs-toggle="tab"
+                data-bs-target="#served-by-adad-co-occurring-mh-tab"
+                aria-controls="served-by-adad-co-occurring-mh-tab"
+                aria-selected="false"
+            >
+            Served by ADAD with co-occurring MH and SU diagnosis
+            </button>
+        </li>
+        <li class="nav-item">
+            <button
+                type="button"
+                class="nav-link"
+                role="tab"
+                data-bs-toggle="tab"
+                data-bs-target="#served-by-camhd-co-occurring-mh-tab"
+                aria-controls="served-by-camhd-co-occurring-mh-tab"
+                aria-selected="false"
+            >
+            Served by CAMHD with co-occurring MH and SU diagnosis
+            </button>
+        </li>
+    </ul>
 
-        <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
-            <div class="d-flex">
-            <div class="me-2">
-                <span class="badge bg-label-primary p-2"><i class="bx bx-person text-primary"></i></span>
-            </div>
-            <div class="d-flex flex-column">
-                <small>2022</small>
-                <h6 class="mb-0">160</h6>
-            </div>
-            </div>
-            <div class="d-flex">
-            <div class="me-2">
-                <span class="badge bg-label-info p-2"><i class="bx bx-person text-info"></i></span>
-            </div>
-            <div class="d-flex flex-column">
-                <small>2021</small>
-                <h6 class="mb-0">100</h6>
-            </div>
+    <div class="tab-content px-0">
+        <div class="tab-pane fade show active" id="served-by-amhd-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Incoming Calls
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-        </div>
-    </div>
-    </div>
 
-    
-    
-    <div class="row"> 
-    <div class="col-12 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
-            <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
-                <div class="card-title">
-                <h5 class="text-nowrap mb-2">Report</h5>
-                <span class="badge bg-label-warning rounded-pill">Year 2021</span>
+        <div class="tab-pane fade" id="served-by-camhd-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
                 </div>
-                <div class="mt-sm-auto">
-                <small class="text-success text-nowrap fw-semibold"
-                    ><i class="bx bx-chevron-up"></i> 68.2%</small
-                >
-                <h3 class="mb-0">156</h3>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Incoming Calls
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            <div id="profileReportChart"></div>
+        </div>
+
+        <div class="tab-pane fade" id="served-by-amhd-co-occurring-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Incoming Calls
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
+        <div class="tab-pane fade" id="served-by-adad-co-occurring-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Incoming Calls
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="tab-pane fade" id="served-by-camhd-co-occurring-mh-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Incoming Calls
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

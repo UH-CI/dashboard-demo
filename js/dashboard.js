@@ -1,12 +1,8 @@
 $(".vis-container").each(function () {
-    console.log(this);
     const leftControl = $(this).children(".vis-nav.left");
     const rightControl = $(this).children(".vis-nav.right");
     const visPanels = $(this).children(".vis-panels").children(".vis-panel");
     let activeIndex;
-
-    console.log(visPanels.length);
-    console.log(visPanels[0]);
 
     const checkEnd = () => {
         if(activeIndex == 0) {

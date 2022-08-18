@@ -1,178 +1,55 @@
-                    
-<p>
-    <p>DataSets:
-    <ul>
-        <li>Incoming Hawaii CARES calls</li>
+
+<h1 class="px-4">
+    Hawaiʻi Behavioral Crisis Statistics
+</h1>
+
+<div class="card block shadow-top my-4">
+    <div class="card-header">
+    <h4 class="fw-bold">
+        Public Service Utilization Statistics
+    </h4>
+    <hr>
+    </div>
+
+    <ul class="nav nav-pills px-4 nav-fill" role="tablist">
+        <li class="nav-item">
+            <button
+            type="button"
+            class="nav-link active"
+            role="tab"
+            data-bs-toggle="tab"
+            data-bs-target="#served-by-cares-bc-tab"
+            aria-controls="served-by-cares-bc-tab"
+            aria-selected="true"
+            >
+            Served by Crisis Call Center
+            </button>
+        </li>
     </ul>
-    </p>
-    <p>Desired Filters (Where Applicable):
-    <ul>
-        <li>Homelessness</li>
-        <li>Economic</li>
-        <li>Demographics (Sex/Gender, Race, Ethnicity, Age)</li>
-        <li>Geographic Region</li>
-        <li>Discharge Month</li>
-        <li>Substance Type</li>
-        <li>Mental Illness</li>
-        <li>Call Urgency</li>
-        <li>Call Purpose</li>
-        <li>Date Range</li>
-        <li>Day/Week/Month</li>
-        <li>Service Type</li>
-    </ul>
-    </p>
-</p>
-<div class="col-lg-12 col-md-8 order-1">
-    <div class="row">
-    <div class="col-lg-6 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart-success.png"
-                alt="chart success"
-                class="rounded"
-                />
+
+    <div class="tab-content px-0">
+        <div class="tab-pane fade show active" id="served-by-cares-bc-tab" role="tabpanel">
+            <div class="d-flex vis-container">
+                <div class="vis-nav left">
+                    <button class="btn pr-1 pl-3 h-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="h-100 flex-grow-1 vis-panels">
+                    <div class="vis-panel active">
+                        <!-- replace with iframes, power bi graphs should have info/header on what is being measured -->
+                        <h3 class="px-4">
+                            Number of Incoming Calls
+                        </h3>
+                        <img class="w-100" src="../assets/img/temp/chart.png" alt="" />
+                    </div>
+                </div>
+                <div class="vis-nav right">
+                    <button class="btn pl-1 pr-3 h-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
-            
-            </div>
-            <span>Total Crisis Calls</span>
-            <h3 class="card-title mb-2">800</h3>
         </div>
-        </div>
-    </div>
-    <div class="col-lg-6 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            </div>
-            <span>Calls in July</span>
-            <h3 class="card-title mb-2">103</h3>
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            
-            </div>
-            <span>ADAD Total Served</span>
-            <h3 class="card-title text-nowrap mb-1">103</h3>
-            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            
-            </div>
-            <span>AMHD Total Served</span>
-            <h3 class="card-title text-nowrap mb-1">80</h3>
-            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +20.42%</small>
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            
-            </div>
-            <span>CAMHD Total Served</span>
-            <h3 class="card-title text-nowrap mb-1">77</h3>
-            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +12.42%</small>
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            
-            </div>
-            <span>ADAD Total Individuals Served With Co-Occurring</span>
-            <h3 class="card-title text-nowrap mb-1">51</h3>
-            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +15.42%</small>
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            
-            </div>
-            <span>AMHD Total Individuals Served With Co-Occurring</span>
-            <h3 class="card-title text-nowrap mb-1">41</h3>
-            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +22.42%</small>
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-6 mb-4">
-        <div class="card">
-        <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-            <div class="avatar flex-shrink-0">
-                <img
-                src="../assets/img/icons/unicons/chart.png"
-                alt="Credit Card"
-                class="rounded"
-                />
-            </div>
-            
-            </div>
-            <span>CAMHD Total Individuals Served With Co-Occuring</span>
-            <h3 class="card-title text-nowrap mb-1">32</h3>
-            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +10.42%</small>
-        </div>
-        </div>
-    </div>
     </div>
 </div>
-
